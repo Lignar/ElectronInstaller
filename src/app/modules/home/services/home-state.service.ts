@@ -23,7 +23,7 @@ export class HomeStateService {
         this.fetchingPath = true;
         this.fetchingPath$.next(this.fetchingPath);
         this.homeHttpService.fetchPath().pipe(take(1)).subscribe((path) => {
-            this.path = path;
+            this.path = path.path;
             this.fetchingPath = false;
             this.path$.next(this.path);
             this.fetchingPath$.next(this.fetchingPath);
@@ -41,7 +41,7 @@ export class HomeStateService {
     }
 
     // public getPath(): Observable<string> {
-    //     return 
+    //     return
 
     // }
 
