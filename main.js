@@ -27,7 +27,7 @@ ipcMain.on('openDialog', function() {
         if(result.filePaths[0]) {
             win.webContents.send('selectedPath', result.filePaths[0]);
         }
-        
+
     })
 })
 
@@ -46,7 +46,7 @@ function createWindow() {
         }
     })
 
-    win.loadFile(`dist/electro-janusz/index.html`)
+    win.loadFile(`dist/electron-launcher-installer/index.html`)
     win.webContents.on('did-finish-load', () => {
         win.webContents.send('passed-params', options.slice(2))
       })

@@ -8,7 +8,7 @@ import { ElectronService } from 'ngx-electron';
 })
 export class AppComponent implements OnInit {
   public firstParam: any;
-  public title = 'electro-janusz';
+  public title = 'electron-launcher-installer';
 
   constructor(private electronService: ElectronService) {}
 
